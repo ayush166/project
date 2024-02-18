@@ -12,6 +12,7 @@ function TodoList() {
   const todosPerPage = 7;
 
   useEffect(() => {
+    setIsLoading(true); 
     fetch(`https://jsonplaceholder.typicode.com/todos?_page=${currentPage + 1}&_limit=${todosPerPage}`)
       .then(response => {
         if (!response.ok) {
@@ -22,8 +23,8 @@ function TodoList() {
         return response.json();
       })
       .then(data =>{
-        setIsLoading(false);
         setTodos(data)
+        setIsLoading(false);
       })
       .catch(error => {
         console.error('Error fetching todos:', error);
