@@ -1,0 +1,17 @@
+body{
+  background: linear-gradient(to right, #00FF6C,#00AAFF );
+}
+.container{
+ display: flex;
+ margin-inline:5rem;
+ margin-top: 3rem;
+}
+.flex-1{
+  flex:1;
+}
+.flex{
+  display: flex;
+}
+.gap-2{
+  gap:2rem;
+}

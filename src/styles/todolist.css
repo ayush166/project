@@ -1,0 +1,89 @@
+/* Global styles */
+.global-body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* Todo List container */
+.todo-list-container {
+  padding: 0;
+}
+
+/* Todo List items */
+.todo-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Checkbox within Todo List item */
+.todo-checkbox {
+  margin-right: 10px;
+}
+
+/* Delete button within Todo List item */
+.todo-delete-btn {
+  margin-left: auto;
+  padding: 5px 10px;
+  background: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todo-delete-btn:hover {
+  background: #c9302c;
+}
+.pageClassName{
+  border:10px solid black;
+}
+/* Pagination container */
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 2rem;
+  list-style: none;
+}
+
+/* Pagination items */
+.page-item {
+  margin: 0 5px;
+}
+
+/* Pagination links */
+.page-link {
+  text-decoration: none;
+  padding: 5px 10px;
+  background: #5cb85c;
+  color: white;
+  border-radius: 4px;
+}
+
+.page-link:hover {
+  background: #4cae4c;
+}
+
+
+/* Break label in pagination */
+.break-label-link {
+  cursor: default;
+  background: none;
+  color: #5cb85c;
+}
+
+.activeLinkClass,.activeLinkClass:hover{
+  background-color: rgb(186, 152, 14);
+}
+.text-red{
+ color:red;
+}
