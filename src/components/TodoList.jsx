@@ -8,11 +8,11 @@ function TodoList() {
   const [pageCount, setPageCount] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
   const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(false); 
+ 
   const todosPerPage = 7;
 
   useEffect(() => {
-    setIsLoading(true); 
+   
     fetch(`https://jsonplaceholder.typicode.com/todos?_page=${currentPage + 1}&_limit=${todosPerPage}`)
       .then(response => {
         if (!response.ok) {
@@ -24,12 +24,12 @@ function TodoList() {
       })
       .then(data =>{
         setTodos(data)
-        setIsLoading(false);
+      
       })
       .catch(error => {
         console.error('Error fetching todos:', error);
         setError(error.message);
-        setIsLoading(false);
+     
       });
   }, [currentPage]);
 
@@ -48,7 +48,7 @@ function TodoList() {
   return (
     <>
     <div className="global-body">
-    {!isLoading && ( <ul className="todo-list-container">
+     <ul className="todo-list-container">
     {error && <div className="error text-red">Error: {error}</div>}
    
     {todos.map(todo => (
@@ -70,7 +70,7 @@ function TodoList() {
     </button>
   </li>
 ))}
-    </ul>)}
+    </ul>
     </div>
     <ReactPaginate
       breakLabel={'...'}
